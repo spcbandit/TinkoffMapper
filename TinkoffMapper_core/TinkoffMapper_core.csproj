@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.19.4" />
+    <PackageReference Include="Grpc.Core" Version="2.44.0" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.51.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.44.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="JetBrains.Annotations" Version="2021.3.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StreamManager\StreamManager.csproj" />
+  </ItemGroup>
+	<ItemGroup>
+		<Protobuf Include="Protos\common.proto" />
+		<Protobuf Include="Protos\instruments.proto" />
+		<Protobuf Include="Protos\marketdata.proto" />
+		<Protobuf Include="Protos\operations.proto" />
+		<Protobuf Include="Protos\orders.proto" />
+		<Protobuf Include="Protos\sandbox.proto" />
+		<Protobuf Include="Protos\stoporders.proto" />
+		<Protobuf Include="Protos\users.proto" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Reference Include="StreamManager">
+	    <HintPath>bin\Release\net5.0\StreamManager.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
+</Project>

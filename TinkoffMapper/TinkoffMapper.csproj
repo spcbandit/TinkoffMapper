@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B0E0C1AC-0A9D-4AE4-835B-3D026DBED86E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TinkoffMapper</RootNamespace>
+    <AssemblyName>TinkoffMapper</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\_Libraries\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Google.Protobuf, Version=3.19.4.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.19.4\lib\net45\Google.Protobuf.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Grpc.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Grpc.Core.2.44.0\lib\net45\Grpc.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Grpc.Core.Api, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Grpc.Core.Api.2.46.6\lib\net45\Grpc.Core.Api.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Grpc.Net.Client, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Grpc.Net.Client.2.46.0\lib\netstandard2.0\Grpc.Net.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Grpc.Net.Client.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Grpc.Net.Client.Web.2.51.0\lib\netstandard2.0\Grpc.Net.Client.Web.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Grpc.Net.Common, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d754f35622e28bad, processorArchitecture=MSIL">
+      <HintPath>..\packages\Grpc.Net.Common.2.46.0\lib\netstandard2.0\Grpc.Net.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JetBrains.Annotations, Version=2020.1.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>..\packages\JetBrains.Annotations.2020.1.0\lib\net20\JetBrains.Annotations.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.3.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.5.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions\DecimalExtensions.cs" />
+    <Compile Include="Extensions\DictionaryStringStringExtensions.cs" />
+    <Compile Include="Extensions\DoubleExtensions.cs" />
+    <Compile Include="Extensions\EnumHelper.cs" />
+    <Compile Include="Extensions\JsonConvertExtensions.cs" />
+    <Compile Include="Extensions\MoneyValueExtensions.cs" />
+    <Compile Include="Extensions\QuotationExtension.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\UnixTimeExtensions.cs" />
+    <Compile Include="Extensions\UriExtensions.cs" />
+    <Compile Include="Handlers\BaseJsonHandler.cs" />
+    <Compile Include="Handlers\CommonJsonHandler.cs" />
+    <Compile Include="Handlers\IDataHandler.cs" />
+    <Compile Include="Handlers\ISingleMessageHandler.cs" />
+    <Compile Include="Handlers\ISnapshotHandler.cs" />
+    <Compile Include="Handlers\ProtoMessageConverter.cs" />
+    <Compile Include="Invest\Rest\Bonds\Request\Market\BondsRequest.cs" />
+    <Compile Include="Invest\Rest\Common\Data\Account\OperationTrade.cs" />
+    <Compile Include="Invest\Rest\Common\Data\Enum\OrderBookDepthEnum.cs" />
+    <Compile Include="Invest\Rest\Common\Request\Account\GetOrdersRequest.cs" />
+    <Compile Include="Invest\Rest\Common\Request\Account\GetOrderStateRequest.cs" />
+    <Compile Include="Invest\Rest\Currencies\Request\Market\CurrenciesRequest.cs" />
+    <Compile Include="Invest\Rest\Currencies\Request\Market\GetCurrencyByRequest.cs" />
+    <Compile Include="Invest\Rest\Futures\Request\Market\FuturesRequest.cs" />
+    <Compile Include="Invest\MarketStreams\CombineMarketSubscriber.cs" />
+    <Compile Include="Invest\MarketStreams\ContractsMarketStreamsComposition.cs" />
+    <Compile Include="Invest\MarketStreams\Events\CandlesHistoryEvent.cs" />
+    <Compile Include="Invest\MarketStreams\Events\InfoEvent.cs" />
+    <Compile Include="Invest\MarketStreams\Events\LastPriceEvent.cs" />
+    <Compile Include="Invest\MarketStreams\Events\OrderBookEvent.cs" />
+    <Compile Include="Invest\MarketStreams\Events\PingEvent.cs" />
+    <Compile Include="Invest\MarketStreams\Events\TradesEvent.cs" />
+    <Compile Include="Invest\Rest\Common\Data\Account\OperationData.cs" />
+    <Compile Include="Invest\Rest\Common\Data\Account\PositionsFuturesData.cs" />
+    <Compile Include="Invest\Rest\Common\Data\Account\PositionsSecuritiesData.cs" />
+    <Compile Include="Invest\Rest\Common\Data\Account\QuotationData.cs" />
+    <Compile Include="Invest\Rest\Common\Data\Enum\CandleIntervalEnum.cs" />
+    <Compile Include="Invest\Rest\Common\Data\Enum\InstrumentIdTypeEnum.cs" />
+    <Compile Include="Invest\Rest\Common\Data\Enum\InstrumentStatusEnum.cs" />
+    <Compile Include="Invest\Rest\Common\Data\Enum\InstrumentTypeEnum.cs" />
+    <Compile Include="Invest\Rest\Common\Data\Enum\OperationStateEnum.cs" />
+    <Compile Include="Invest\Rest\Common\Data\Enum\OperationTypeEnum.cs" />
+    <Compile Include="Invest\Rest\Common\Data\Enum\OrderDirectionEnum.cs" />
+    <Compile Include="Invest\Rest\Common\Data\Enum\OrderExecutionReportStatusEnum.cs" />
+    <Compile Include="Invest\Rest\Common\Data\Enum\OrderTypeEnum.cs" />
+    <Compile Include="Invest\Rest\Common\Data\Enum\SecurityTradingStatusEnum.cs" />
+    <Compile Include="Invest\Rest\Common\Data\Market\HistoricCandleData.cs" />
+    <Compile Include="Invest\Rest\Common\Data\Market\InstrumentData.cs" />
+    <Compile Include="Invest\Rest\Common\Data\Market\MoneyValueData.cs" />
+    <Compile Include="Invest\Rest\Common\Data\Market\QuotationData.cs" />
+    <Compile Include="Invest\Rest\Common\Request\Account\CancelOrderRequest.cs" />
+    <Compile Include="Invest\Rest\Common\Request\Account\GetAccountsRequest.cs" />
+    <Compile Include="Invest\Rest\Common\Request\Account\GetPortfolioRequest.cs" />
+    <Compile Include="Invest\Rest\Common\Request\Account\GetOperationsRequest.cs" />
+    <Compile Include="Invest\Rest\Common\Request\Account\GetPositionsRequest.cs" />
+    <Compile Include="Invest\Rest\Common\Request\Account\PostOrderRequest.cs" />
+    <Compile Include="Invest\Rest\Common\Request\Account\WithdrawLimitsRequest.cs" />
+    <Compile Include="Invest\Rest\Common\Request\Market\GetCandlesRequest.cs" />
+    <Compile Include="Invest\Rest\Common\Request\Market\GetInstrumentByRequest.cs" />
+    <Compile Include="Invest\Rest\Common\Request\Market\GetLastPricesRequest.cs" />
+    <Compile Include="Invest\Rest\Common\Request\Market\GetOrderBookRequest.cs" />
+    <Compile Include="Invest\Rest\Common\Response\ErrorMessage.cs" />
+    <Compile Include="Invest\Rest\Futures\Request\Market\GetFutureByRequest.cs" />
+    <Compile Include="Invest\Rest\RestApiComposition.cs" />
+    <Compile Include="Invest\Rest\Shares\Request\Market\GetShareByRequest.cs" />
+    <Compile Include="Invest\Rest\Shares\Request\Market\SharesRequest.cs" />
+    <Compile Include="Invest\Stream\Data\StreamCloseMessage.cs" />
+    <Compile Include="Invest\Stream\Data\StreamErrorMessage.cs" />
+    <Compile Include="Invest\Stream\Data\StreamStatusEnum.cs" />
+    <Compile Include="Invest\UserStreams\CombineUserSubscriber.cs" />
+    <Compile Include="Invest\UserStreams\ContractsUserStreamsComposition.cs" />
+    <Compile Include="Invest\UserStreams\Events\PingEvent.cs" />
+    <Compile Include="Invest\UserStreams\Events\PortfolioEvent.cs" />
+    <Compile Include="Invest\UserStreams\Events\PositionsEvent.cs" />
+    <Compile Include="Invest\UserStreams\Events\TradesEvent.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Protos\Common.cs" />
+    <Compile Include="Protos\CommonGrpc.cs" />
+    <Compile Include="Protos\Instruments.cs" />
+    <Compile Include="Protos\InstrumentsGrpc.cs" />
+    <Compile Include="Protos\Marketdata.cs" />
+    <Compile Include="Protos\MarketdataGrpc.cs" />
+    <Compile Include="Protos\Operations.cs" />
+    <Compile Include="Protos\OperationsGrpc.cs" />
+    <Compile Include="Protos\Orders.cs" />
+    <Compile Include="Protos\OrdersGrpc.cs" />
+    <Compile Include="Protos\Sandbox.cs" />
+    <Compile Include="Protos\SandboxGrpc.cs" />
+    <Compile Include="Protos\Stoporders.cs" />
+    <Compile Include="Protos\StopordersGrpc.cs" />
+    <Compile Include="Protos\Users.cs" />
+    <Compile Include="Protos\UsersGrpc.cs" />
+    <Compile Include="Requests\IRequestContent.cs" />
+    <Compile Include="Requests\Request.cs" />
+    <Compile Include="Requests\RequestArranger.cs" />
+    <Compile Include="Requests\RequestInvest.cs" />
+    <Compile Include="Requests\RequestMethod.cs" />
+    <Compile Include="Versions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StreamManager\StreamManager.csproj">
+      <Project>{28525743-8079-41ae-9049-d4f51b69ad7f}</Project>
+      <Name>StreamManager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Grpc.Core.2.44.0\build\net45\Grpc.Core.targets" Condition="Exists('..\packages\Grpc.Core.2.44.0\build\net45\Grpc.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Grpc.Core.2.44.0\build\net45\Grpc.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Grpc.Core.2.44.0\build\net45\Grpc.Core.targets'))" />
+  </Target>
+</Project>
